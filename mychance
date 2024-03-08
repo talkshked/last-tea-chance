@@ -1,0 +1,38 @@
+// Helper function to generate a random color in hexadecimal format
+function generateRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  
+  // Helper function to check if a year is a leap year
+  function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  }
+  
+  // Helper function to reverse a given array
+  function reverseArray(array) {
+    return array.slice().reverse();
+  }
+  
+  // Function to count the occurrence of a character in a string
+  function countCharacterOccurrences(str, char) {
+    return str.split(char).length - 1;
+  }
+  
+  // Example usage
+  console.log("Random color:", generateRandomColor());
+  
+  const testYear = 2024;
+  console.log(`${testYear} is a leap year:`, isLeapYear(testYear));
+  
+  const originalArray = [1, 2, 3, 4, 5];
+  console.log("Reversed array:", reverseArray(originalArray));
+  
+  const testString = "hello world";
+  const charToCount = 'l';
+  console.log(`Number of occurrences of '${charToCount}' in "${testString}":`, countCharacterOccurrences(testString, charToCount));
+  
